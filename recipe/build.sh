@@ -8,19 +8,31 @@ unset SUBDIR
         --disable-doc \
         --enable-shared \
         --enable-static \
-        --extra-cflags="-Wall -g -m64 -pipe -O3 -march=x86-64 -fPIC" \
-        --extra-cxxflags="-Wall -g -m64 -pipe -O3 -march=x86-64 -fPIC" \
+        --extra-cflags="-march=native -mtune=native" \
+        --extra-cxxflags="-march=native -mtune=native" \
         --extra-libs="-lpthread -lm -lz" \
+        --enable-nonfree \
+        --enable-gpl \
+        --enable-libass \
+        --enable-libfdk-aac \
+        --enable-libfreetype \
+        --enable-libmp3lame \
+        --enable-libopus \
+        --enable-libvorbis \
+        --enable-libvpx \
+        --enable-libx264 \
+        --enable-libx265 \
+        --enable-mmal \
+        --enable-omx-rpi \
+        --enable-omx \
+        --enable-libxcb \
         --enable-zlib \
         --enable-pic \
         --enable-pthreads \
-        --enable-gpl \
         --enable-version3 \
         --enable-hardcoded-tables \
         --enable-avresample \
-        --enable-libfreetype \
-        --enable-gnutls \
-        --enable-libx264
+        --enable-gnutls
 
 make -j${CPU_COUNT}
 make install -j${CPU_COUNT}
