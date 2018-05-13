@@ -14,7 +14,7 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - toolchain3-rpi3
     - perl
     - yasm
 
