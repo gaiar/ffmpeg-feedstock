@@ -18,20 +18,6 @@ requirements:
     - perl
     - nasm
 
-# test:
-#   commands:
-#     - test -f ${PREFIX}/include/x264.h         # [unix]
-#     - test -f ${PREFIX}/lib/libx264.a          # [unix]
-#     - test -f ${PREFIX}/lib/libx264.dylib      # [osx]
-#     - test -f ${PREFIX}/lib/libx264.so         # [linux]
-#     - x264 --help                              # [unix]
-
-about:
-  home: http://www.videolan.org/developers/x264.html
-  license: GPL 2
-  license_file: COPYING
-  summary: A free software library for encoding video streams into the H.264/MPEG-4 AVC format.
-
 extra:
   recipe-maintainers:
     - gaiar
