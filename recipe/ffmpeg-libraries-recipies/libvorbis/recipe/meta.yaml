@@ -7,7 +7,7 @@ package:
 source:
   url: http://downloads.xiph.org/releases/vorbis/libvorbis-{{ version }}.tar.gz
   fn: libvorbis-{{ version }}.tar.gz
-  md5: 6ed40e0241089a42c48604dc00e362beee00036af2d8b3f46338031c9e0351cb
+  md5: d3190649b26572d44cd1e4f553943b31
 
 
 build:
@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - toolchain3-rpi3
     - perl
     - yasm
 
