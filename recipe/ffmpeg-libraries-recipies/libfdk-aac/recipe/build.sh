@@ -5,7 +5,7 @@ CFLAGS="-march=native -mtune=native"
 export CFLAGS
 export CXXLAGS="${CFLAGS}"
 
-chmod +x configure
+#chmod +x configure
 autoreconf -fiv
 ./configure --prefix=${PREFIX} --enable-shared --enable-static
 
