@@ -5,7 +5,7 @@ mkdir -vp ${PREFIX}/bin
 CFLAGS="-march=native -mtune=native"
 
 export CFLAGS
-export CXXLAGS="${CFLAGS}"
+export CXXFLAGS="${CFLAGS}"
 
 chmod +x configure
 ./configure \
