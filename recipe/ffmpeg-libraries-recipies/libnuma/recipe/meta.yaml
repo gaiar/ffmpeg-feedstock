@@ -15,7 +15,6 @@ requirements:
   build:
     - toolchain3-rpi3
     - nasm
-    - autoreconf
 
 extra:
   recipe-maintainers:
