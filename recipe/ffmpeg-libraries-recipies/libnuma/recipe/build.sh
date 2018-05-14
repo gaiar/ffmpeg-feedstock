@@ -3,7 +3,7 @@ CFLAGS="-march=native -mtune=native"
 export CFLAGS
 export CXXFLAGS="${CFLAGS}"
 
-chmod + autogen.sh
+chmod +x autogen.sh
 
 ./autogen.sh --prefix=${PREFIX}
 
