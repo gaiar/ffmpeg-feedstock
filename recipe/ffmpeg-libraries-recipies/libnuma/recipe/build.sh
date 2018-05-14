@@ -3,8 +3,10 @@ CFLAGS="-march=native -mtune=native"
 export CFLAGS
 export CXXFLAGS="${CFLAGS}"
 
-autoreconf -fiv
+chmod + autogen.sh
+
+./autogen.sh --prefix=${PREFIX}
 
 make -j ${CPU_COUNT} 
-make install PREFIX=$PREFIX
+make install PREFIX=${PREFIX}
 
