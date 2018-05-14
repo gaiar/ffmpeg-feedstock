@@ -5,6 +5,8 @@ export CXXFLAGS="${CFLAGS}"
 
 autoreconf -fiv
 
+./configure --prefix=${PREFIX} --disable-static
+
 make -j ${CPU_COUNT} 
-make install PREFIX=${PREFIX}
+make install
 
