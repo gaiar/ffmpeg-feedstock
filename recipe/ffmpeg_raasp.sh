@@ -38,7 +38,7 @@ make install
 sudo apt-get install mercurial && \
 cd ~/ffmpeg_sources && \
 if cd x265 2> /dev/null; then hg pull && hg update; else hg clone https://bitbucket.org/multicoreware/x265; fi && \
-cd x265/build/linux && \
+cd x265/build/arm-linux && \
 PATH="$HOME/bin:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED=off ../../source && \
 PATH="$HOME/bin:$PATH" make -j4 && \
 make install
@@ -83,8 +83,7 @@ wget http://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar
 tar -xzf libaacplus-2.0.2.tar.gz && \
 cd libaacplus-2.0.2 && \
 PATH="$HOME/bin:$PATH" ./autogen.sh --enable-static --prefix="$HOME/ffmpeg_build" && \
-make 
--j4 && \
+make -j4 && \
 make install
 
 cd ~/ffmpeg_sources && \
