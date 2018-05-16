@@ -8,7 +8,7 @@ source:
   #fn: x264-snapshot-{{ version }}-2245-stable.tar.bz2
   #url: http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-{{ version }}-2245-stable.tar.bz2
   #md5: f8a490637d8fbdef8200870c3e7f711d
-  git_url: https://git.videolan.org/git/x264
+  git_url: https://github.com/raspberrypi/userland.git
   git_rev: 7d0ff22e8c96de126be9d3de4952edd6d1b75a8c
 
 build:
