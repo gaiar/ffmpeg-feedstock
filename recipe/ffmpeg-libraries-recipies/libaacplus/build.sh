@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -vp ${PREFIX}/bin
+mkdir -vp "${PREFIX}"/bin
 
 CFLAGS="-march=native -mtune=native"
 
@@ -9,10 +9,10 @@ export CXXFLAGS="${CFLAGS}"
 
 chmod +x configure
 ./configure \
-        --enable-pic \
-        --enable-shared \
-        --enable-static \
-        --prefix=${PREFIX}
+--enable-pic \
+--enable-shared \
+--enable-static \
+--prefix=${PREFIX}
 
 make -j${CPU_COUNT}
 make install -j${CPU_COUNT}
