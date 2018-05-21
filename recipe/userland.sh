@@ -18,4 +18,6 @@ make install
 
 
 
-export CFLAGS="-march=native -mtune=native -I${HOME}/ffmpeg_build/include -L${HOME}/ffmpeg_build/lib" && export CXXFLAGS="-march=native -mtune=native -I${HOME}/ffmpeg_build/include -L${HOME}/ffmpeg_build/lib" && export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" && make -j${nproc}
+export CFLAGS="-march=native -mtune=native -I${HOME}/ffmpeg_build/include -L${HOME}/ffmpeg_build/lib" && \
+export CXXFLAGS="-march=native -mtune=native -I${HOME}/ffmpeg_build/include -L${HOME}/ffmpeg_build/lib" &&\
+export PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" && make -j${nproc}
