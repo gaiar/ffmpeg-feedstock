@@ -9,7 +9,7 @@ export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 ./autogen.sh && \
 auto-apt run ./configure && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default
 
 
@@ -21,7 +21,7 @@ cd yasm-1.3.0 && \
 export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 auto-apt run ./configure && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default
 
 cd ~/ffmpeg_sources && \
@@ -35,7 +35,7 @@ auto-apt run ./configure \
 --extra-cflags="-march=native -mtune=native" \
 --enable-static \
 --enable-pic && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default --pkgversion="$VERSION"
 
 
@@ -53,7 +53,7 @@ auto-apt run ./configure \
 --disable-unit-tests \
 --enable-vp9-highbitdepth \
 --as=yasm && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default --pkgversion="$VERSION"
 
 cd ~/ffmpeg_sources && \
@@ -64,7 +64,7 @@ autoreconf -fiv && \
 export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 auto-apt run ./configure --disable-shared && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default --pkgversion="$VERSION"
 
 cd ~/ffmpeg_sources && \
@@ -76,7 +76,7 @@ export CXXFLAGS="-march=native -mtune=native" && \
 auto-apt run ./configure \
 --disable-shared \
 --enable-nasm && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default
 
 
@@ -88,7 +88,7 @@ export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 ./autogen.sh && \
 auto-apt run ./configure --disable-shared && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default --pkgversion="$VERSION"
 
 
@@ -119,7 +119,7 @@ auto-apt run ./configure \
 --enable-static \
 --enable-hardcoded-tables \
 --extra-cflags="-march=native -mtune=native" && \
-make -j${nproc} && \
+make -j$(nproc) && \
 sudo checkinstall --default
 hash -r
 

@@ -9,7 +9,7 @@ export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 ./autogen.sh && \
 PATH="$HOME/bin:$PATH" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" && \
-make -j${nproc} && \
+make -j$(nproc) && \
 make install
 
 cd ~/ffmpeg_sources && \
@@ -19,7 +19,7 @@ cd yasm-1.3.0 && \
 export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" && \
-make -j${nproc} && \
+make -j$(nproc) && \
 make install
 
 cd ~/ffmpeg_sources && \
@@ -31,7 +31,7 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
 --bindir="$HOME/bin" \
 --enable-static \
 --enable-pic && \
-PATH="$HOME/bin:$PATH" make -j${nproc} && \
+PATH="$HOME/bin:$PATH" make -j$(nproc) && \
 make install
 
 
@@ -62,7 +62,7 @@ PATH="$HOME/bin:$PATH" ./configure \
 --disable-unit-tests \
 --enable-vp9-highbitdepth \
 --as=yasm && \
-PATH="$HOME/bin:$PATH" make -j${nproc} && \
+PATH="$HOME/bin:$PATH" make -j$(nproc) && \
 make install
 
 cd ~/ffmpeg_sources && \
@@ -72,7 +72,7 @@ autoreconf -fiv && \
 export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 ./configure --prefix="$HOME/ffmpeg_build" --disable-shared && \
-make -j${nproc} && \
+make -j$(nproc) && \
 make install
 
 cd ~/ffmpeg_sources && \
@@ -86,7 +86,7 @@ PATH="$HOME/bin:$PATH" ./configure \
 --bindir="$HOME/bin" \
 --disable-shared \
 --enable-nasm && \
-PATH="$HOME/bin:$PATH" make -j${nproc} && \
+PATH="$HOME/bin:$PATH" make -j$(nproc) && \
 make install
 
 cd ~/ffmpeg_sources && \
@@ -96,7 +96,7 @@ export CFLAGS="-march=native -mtune=native" && \
 export CXXFLAGS="-march=native -mtune=native" && \
 ./autogen.sh && \
 ./configure --prefix="$HOME/ffmpeg_build" --disable-shared && \
-make -j${nproc} && \
+make -j$(nproc) && \
 make install
 
 
@@ -111,7 +111,7 @@ PATH="$HOME/bin:$PATH" cmake -G "Unix Makefiles" \
 -DENABLE_SHARED=off \
 -DAOM_TARGET_CPU=armv7 \
 -DENABLE_NASM=on ../aom && \
-PATH="$HOME/bin:$PATH" make -j${nproc} && \
+PATH="$HOME/bin:$PATH" make -j$(nproc) && \
 make install
 
 
@@ -147,6 +147,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
 --enable-static \
 --enable-hardcoded-tables \
 --extra-cflags="-march=native -mtune=native" && \
-PATH="$HOME/bin:$PATH" make -j${nproc} && \
+PATH="$HOME/bin:$PATH" make -j$(nproc) && \
 make install && \
 hash -r
