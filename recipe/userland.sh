@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-export CFLAGS="-march=native -mtune=native" && \
-export CXXFLAGS="-march=native -mtune=native" && \
-PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./make -j$(nproc)
+export CFLAGS="-march=native -mtune=native -L/opt/vc/lib" && \
+export CXXFLAGS="-march=native -mtune=native -L/opt/vc/lib" && \
+export LD_LIBRARY_PATH="/usr/local/lib" && \
+./make -j$(nproc)
 
 cd userland && \
 mkdir build && \
